@@ -58,7 +58,12 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Sébastien Morazzani-Marigny",
     url: "https://www.sebastien-morazzani.com",
-    logo: "https://www.sebastien-morazzani.com/favicon.ico",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.sebastien-morazzani.com/menu.svg",
+      width: "100",
+      height: "100",
+    },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+33-6-36-37-70-46",
