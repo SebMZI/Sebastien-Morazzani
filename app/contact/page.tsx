@@ -3,10 +3,31 @@ import React, { useEffect, useRef, useState } from "react";
 import type { Metadata } from "next";
 import emailjs from "@emailjs/browser";
 import Head from "next/head";
+import { easeInOut, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import loadingGif from "../assets/loading.svg";
+import Image from "next/image";
 
 const Contact = () => {
   const form = useRef(null);
-  const [msg, setMsg] = useState("Envoyer");
+  const [spin, setSpin] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [msg, setMsg] = useState("Rien");
+  const variants = {
+    out: {
+      opacity: 0,
+      y: 40,
+    },
+    in: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.17, 0.67, 0.83, 0.91],
+        duration: 1,
+        delay: 0.15,
+      },
+    },
+  };
 
   const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -16,6 +37,7 @@ const Contact = () => {
       process.env.NEXT_PUBLIC_EMAILJS_USER_ID &&
       form.current
     ) {
+      setSpin(true);
       emailjs
         .sendForm(
           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -25,28 +47,61 @@ const Contact = () => {
         )
         .then(
           (result) => {
-            setMsg("Envoyé");
+            setSpin(false);
+            setModal(true);
+            setMsg("Message envoyé!");
             const formClear = form.current as HTMLFormElement | null;
             if (formClear) {
               formClear.reset();
             }
             setTimeout(() => {
-              setMsg("Envoyer");
-            }, 3000);
+              setModal(false);
+              setMsg("");
+            }, 4000);
           },
           (error) => {
-            setMsg("Erreur");
+            setSpin(false);
+            setMsg("Erreur lors de l'envoi!");
             setTimeout(() => {
-              setMsg("Envoyer");
-            }, 3000);
+              setModal(false);
+              setMsg("");
+            }, 4000);
           }
         );
     }
   };
 
   return (
-    <>
-      <main className="text-white">
+    <AnimatePresence mode="wa">
+      <motion.main
+        className="text-white relative"
+        variants={variants}
+        initial="out"
+        animate="in"
+        exit="out"
+      >
+        {modal ? (
+          <motion.div
+            className={`absolute top-[-50px] left-2/4  py-4 px-20 text-white  text-center rounded-sm ${
+              msg === "Message envoyé!" ? "bg-[#58eb58]" : "bg-[#eb5353]"
+            }`}
+            initial={{
+              x: "-50%",
+              y: "-50px",
+              opacity: 0,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: easeInOut,
+              },
+            }}
+          >
+            {msg}
+          </motion.div>
+        ) : null}
         <section className="my-20">
           <div className="w-2/4">
             <h1 className="text-2xl">Parlons de votre futur projet.</h1>
@@ -128,12 +183,24 @@ const Contact = () => {
               placeholder="Description  du projet, besoins, timing, objectifs... Donnez-nous des informations  sur votre projet afin que nous puissions préparer au mieux notre futur échange."
             ></textarea>
 
-            <button
+            <motion.button
               type="submit"
-              className="mt-6 bg-ascent w-full py-2 rounded-md  animate-pulse"
+              className="mt-6 bg-ascent w-full py-2 rounded-md  "
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.9 }}
             >
-              {msg}
-            </button>
+              {spin ? (
+                <div className="w-full grid place-content-center">
+                  <Image
+                    src={loadingGif}
+                    alt="loading spin"
+                    className="w-5 h-5"
+                  />
+                </div>
+              ) : (
+                "Envoyer"
+              )}
+            </motion.button>
           </form>
           <div className="border-[0.5px] bg-secondary w-full mb-10 tablette:w-0 tablette:mx-14"></div>
           <div>
@@ -161,8 +228,8 @@ const Contact = () => {
             </div>
           </div>
         </section>
-      </main>
-    </>
+      </motion.main>
+    </AnimatePresence>
   );
 };
 
