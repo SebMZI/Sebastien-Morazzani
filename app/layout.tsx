@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Head from "next/head";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
@@ -78,6 +79,7 @@ export default function RootLayout({
       <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto ">
         <Header />
         {children}
+        <Analytics />
         <Footer />
         <script
           type="application/ld+json"

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import React, { Children } from "react";
 
 export const metadata: Metadata = {
-  title: "Demander un Devis gratuit | Sébastien Morazzani-Marigny",
+  title: "Demander un Devis Web gratuit | Sébastien Morazzani-Marigny",
   description:
     "Contact | Sébastien Morazzani-Marigny. Parlons de votre futur projet. Il est important d'échanger afin de mieux comprendre vos besoins et vos attentes pour délivrer un site web exceptionel.",
 };
