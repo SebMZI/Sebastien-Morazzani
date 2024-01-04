@@ -4,9 +4,11 @@ import React, { useEffect, useState } from "react";
 import logoPic from "../assets/logo_pic.png";
 import menuPic from "../assets/menu.svg";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="flex flex-row justify-between items-center">
@@ -24,25 +26,56 @@ const Header = () => {
         <Image
           src={menuPic}
           alt="menu burger icon"
-          className={`menu-icon cursor-pointer tablette:hidden`}
+          className={`menu-icon cursor-pointer tablette:hidden z-30`}
           onClick={() => setToggle(!toggle)}
         />
         <ul
-          className={`text-white  flex-row gap-6  tablette:flex  ${
-            toggle ? "phone:flex" : "phone:hidden"
+          onClick={() => setToggle(!toggle)}
+          className={`text-white tablette:relative tablette:flex-row gap-6 transition tablette:flex  ${
+            toggle
+              ? "phone:flex phone:fixed phone:inset-0 phone:flex-col phone:w-screen  phone:h-screen phone:bg-primary phone:z-20 phone:justify-center phone:items-center"
+              : "phone:hidden"
           }`}
         >
           <li>
-            <Link href="/">Accueil</Link>
+            <Link
+              href="/"
+              className={`hover:border-b-2 hover:border-ascent  ${
+                pathname == "/" ? "text-ascent" : ""
+              }`}
+            >
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link href="/#services">Services</Link>
+            <Link
+              href="/#services"
+              className={`hover:border-b-2 hover:border-ascent ${
+                pathname == "/#services" ? "text-ascent" : ""
+              }`}
+            >
+              Services
+            </Link>
           </li>
           <li>
-            <Link href="/#gallerie">Gallerie</Link>
+            <Link
+              href="/#gallerie"
+              className={`hover:border-b-2 hover:border-ascent ${
+                pathname == "/#gallerie" ? "text-ascent" : ""
+              }`}
+            >
+              Gallerie
+            </Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link
+              href="/contact"
+              className={`hover:border-b-2 hover:border-ascent ${
+                pathname == "/contact" ? "text-ascent" : ""
+              }`}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

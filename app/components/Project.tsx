@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface props {
@@ -6,17 +7,20 @@ interface props {
   date: string;
   image: any;
   className?: string;
+  link?: string;
 }
 
-const Project = ({ title, date, image }: props) => {
+const Project = ({ title, date, image, link }: props) => {
   return (
-    <article className="w-full h-[162px] rounded-lg">
-      <Image
-        src={image}
-        className="rounded-lg h-[162px] object-cover"
-        alt={`Image de ${title} créer par Sébastien Morazzani-Marigny`}
-      />
-    </article>
+    <Link href={link ? link : "#"} target={link ? "_blank" : ""}>
+      <article className="w-full h-[162px] rounded-lg cursor-pointer">
+        <Image
+          src={image}
+          className="rounded-lg h-[162px] object-cover"
+          alt={`Image de ${title} créer par Sébastien Morazzani-Marigny`}
+        />
+      </article>
+    </Link>
   );
 };
 

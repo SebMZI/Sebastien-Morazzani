@@ -1,13 +1,63 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import type { Metadata } from "next";
+import emailjs from "@emailjs/browser";
+import Head from "next/head";
 
-export const metadata: Metadata = {
-  title: "Contact | Sébastien Morazzani-Marigny",
-  description:
-    "Contact | Sébastien Morazzani-Marigny. Parlons de votre futur projet. Il est important d'échanger afin de mieux comprendre vos besoins et vos attentes pour délivrer un site web exceptionel.",
-};
+// export const metadata: Metadata = {
+//   title: "Contact | Sébastien Morazzani-Marigny",
+//   description:
+//     "Contact | Sébastien Morazzani-Marigny. Parlons de votre futur projet. Il est important d'échanger afin de mieux comprendre vos besoins et vos attentes pour délivrer un site web exceptionel.",
+// };
 
 const Contact = () => {
+  const form = useRef(null);
+  const [msg, setMsg] = useState("Envoyer");
+  useEffect(() => {
+    document.title = "Demander un Devis gratuit | Sébastien Morazzani-Marigny";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    metaDescription?.setAttribute(
+      "content",
+      "Parlons de votre projet | Sébastien Morazzani-Marigny. Parlons de votre futur projet. Il est important d'échanger afin de mieux comprendre vos besoins et vos attentes pour délivrer un site web exceptionnel."
+    );
+  }, []);
+
+  const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
+      process.env.NEXT_PUBLIC_EMAILJS_USER_ID &&
+      form.current
+    ) {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          form.current,
+          process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+        )
+        .then(
+          (result) => {
+            setMsg("Envoyé");
+            const formClear = form.current as HTMLFormElement | null;
+            if (formClear) {
+              formClear.reset();
+            }
+            setTimeout(() => {
+              setMsg("Envoyer");
+            }, 3000);
+          },
+          (error) => {
+            setMsg("Erreur");
+            setTimeout(() => {
+              setMsg("Envoyer");
+            }, 3000);
+          }
+        );
+    }
+  };
+
   return (
     <>
       <main className="text-white">
@@ -21,7 +71,12 @@ const Contact = () => {
           </div>
         </section>
         <section className="tablette:flex tablette:flex-row-reverse ">
-          <form className="mb-20 tablette:w-5/6">
+          <form
+            className="mb-20 tablette:w-5/6"
+            id="contact-form"
+            ref={form}
+            onSubmit={sendEmail}
+          >
             <div className="tablette:flex tablette:flex-row tablette:gap-4">
               <div className="flex flex-col gap-1 mb-3 tablette:w-2/4">
                 <label htmlFor="name">
@@ -30,8 +85,10 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="from_name"
                   className="rounded-md bg-secondary pl-2 h-10 text-primary"
                   placeholder="John"
+                  required
                 />
               </div>
               <div className="flex flex-col gap-1 mb-3 tablette:w-2/4">
@@ -40,10 +97,11 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  name="lastname"
+                  name="from_lastname"
                   id="lastname"
                   className="rounded-md bg-secondary pl-2 h-10 text-primary"
                   placeholder="Doe"
+                  required
                 />
               </div>
             </div>
@@ -55,6 +113,7 @@ const Contact = () => {
                   id="entreprise"
                   className="rounded-md bg-secondary pl-2 h-10 text-primary"
                   placeholder="SMM"
+                  name="entreprise"
                 />
               </div>
               <div className="flex flex-col gap-1 mb-3 tablette:w-2/4">
@@ -65,6 +124,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   id="email"
+                  required
                   className="rounded-md bg-secondary pl-2 h-10 text-primary"
                   placeholder="contact@gmail.com"
                 />
@@ -75,6 +135,7 @@ const Contact = () => {
               <span className="text-[#FF0000]">*</span>
             </label>
             <textarea
+              required
               name="message"
               id="message"
               className="w-full h-48 rounded-md bg-secondary pl-2 pt-2 mt-2 text-primary"
@@ -83,9 +144,9 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="mt-6 bg-ascent w-full py-2 rounded-md "
+              className="mt-6 bg-ascent w-full py-2 rounded-md  animate-pulse"
             >
-              Envoyer
+              {msg}
             </button>
           </form>
           <div className="border-[0.5px] bg-secondary w-full mb-10 tablette:w-0 tablette:mx-14"></div>
