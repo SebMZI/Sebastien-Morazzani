@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <head>
+      <Head>
         <script type="application/ld+json">
           {
               "@context": "https://schema.org",
@@ -36,7 +37,7 @@ export default function RootLayout({
               ]
           }
         </script>
-      </head>
+      </Head>
       <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto ">
         <Header />
         {children}
