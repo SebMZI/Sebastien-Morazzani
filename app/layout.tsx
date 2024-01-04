@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Head from "next/head";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
@@ -18,8 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <Head>
-        <script type="application/ld+json">
+        <Script type="application/ld+json">
           {
               "@context": "https://schema.org",
               "@type": "Organization",
@@ -36,8 +36,7 @@ export default function RootLayout({
                   "https://www.linkedin.com/company/sebastien-morazzani-marigny"
               ]
           }
-        </script>
-      </Head>
+        </Script>
       <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto ">
         <Header />
         {children}
