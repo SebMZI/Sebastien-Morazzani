@@ -19,24 +19,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-        <Script type="application/ld+json">
-          {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Sébastien Morazzani-Marigny",
-              "url": "https://www.sebastien-morazzani.com",
-              "logo": "https://www.sebastien-morazzani.com/favicon.ico",
-              "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+33-6-36-37-70-46",
-                  "email": "contact@sebastien-morazzani.com",
-                  "contactType": "customer service"
-              },
-              "sameAs": [
-                  "https://www.linkedin.com/company/sebastien-morazzani-marigny"
-              ]
-          }
-        </Script>
       <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto ">
         <Header />
         {children}
