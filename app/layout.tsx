@@ -53,30 +53,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Sébastien Morazzani-Marigny",
+    url: "https://www.sebastien-morazzani.com",
+    logo: "https://www.sebastien-morazzani.com/favicon.ico",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+33-6-36-37-70-46",
+      email: "contact@sebastien-morazzani.com",
+      contactType: "customer service",
+    },
+    sameAs: ["https://www.linkedin.com/company/sebastien-morazzani-marigny"],
+  };
+
   return (
     <html lang="fr">
       <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto ">
         <Header />
         {children}
         <Footer />
-        <script type="application/ld+json">
-          {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Sébastien Morazzani-Marigny",
-              "url": "https://www.sebastien-morazzani.com",
-              "logo": "https://www.sebastien-morazzani.com/favicon.ico",
-              "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+33-6-36-37-70-46",
-                  "email": "contact@sebastien-morazzani.com",
-                  "contactType": "customer service"
-              },
-              "sameAs": [
-                  "https://www.linkedin.com/company/sebastien-morazzani-marigny"
-              ]
-          }
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
