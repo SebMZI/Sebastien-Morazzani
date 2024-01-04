@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="w-full h-full text-white">
-      <section className="my-48 relative">
+      <section className="tablette:my-48 relative phone:my-40">
         <h1 className=" tablette:text-[70px] tablette:leading-[60px] tablette:w-3/4 phone:text-[32px] phone:leading-9">
           Élevez votre entreprise vers de nouveaux sommets en investissant dans
           sa <span className="text-ascent">visibilité</span> : Le pouvoir de la
@@ -36,7 +36,7 @@ export default function Home() {
           className="animate-bounce w-8 h-8 absolute bottom-[-125px] left-2/4"
         />
       </section>
-      <section id="services" className="mb-48">
+      <section id="services" className="tablette:mb-48 phone:mb-40">
         <div className=" mb-9">
           <h2 className="text-ascent">Services</h2>
           <p className="text-3xl">
@@ -62,7 +62,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="gallerie" className="mb-48">
+      <section id="gallerie" className="tablette:mb-48 phone:mb-40">
         <div className=" mb-9">
           <h2 className="text-ascent">Travaux</h2>
           <p className="text-3xl">D’autres projets avant le vôtre.</p>

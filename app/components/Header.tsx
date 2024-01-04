@@ -37,38 +37,41 @@ const Header = () => {
               : "phone:hidden"
           }`}
         >
-          <li>
+          <li className=" h-[48px]">
             <Link
               href="/"
-              className={`hover:border-b-2 hover:border-ascent  ${
+              className={`hover:border-b-2 hover:border-ascent text-lg  ${
                 pathname == "/" ? "text-ascent" : ""
               }`}
             >
               Accueil
             </Link>
           </li>
-          <li>
+          <li className="h-[48px]">
             <Link
               href="/#services"
-              className={`hover:border-b-2 hover:border-ascent ${
+              className={`hover:border-b-2 hover:border-ascent text-lg ${
                 pathname == "/#services" ? "text-ascent" : ""
               }`}
             >
               Services
             </Link>
           </li>
-          <li>
+          <li className="h-[48px]">
             <Link
               href="/#gallerie"
-              className={`hover:border-b-2 hover:border-ascent ${
+              className={`hover:border-b-2 hover:border-ascent text-lg ${
                 pathname == "/#gallerie" ? "text-ascent" : ""
               }`}
             >
               Gallerie
             </Link>
           </li>
-          <li>
-            <Link href="/contact" className="py-2 px-3 bg-ascent rounded-lg">
+          <li className="h-[48px]">
+            <Link
+              href="/contact"
+              className="py-2 px-3 bg-ascent rounded-lg text-lg"
+            >
               Contact
             </Link>
           </li>
