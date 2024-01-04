@@ -4,24 +4,9 @@ import type { Metadata } from "next";
 import emailjs from "@emailjs/browser";
 import Head from "next/head";
 
-// export const metadata: Metadata = {
-//   title: "Contact | Sébastien Morazzani-Marigny",
-//   description:
-//     "Contact | Sébastien Morazzani-Marigny. Parlons de votre futur projet. Il est important d'échanger afin de mieux comprendre vos besoins et vos attentes pour délivrer un site web exceptionel.",
-// };
-
 const Contact = () => {
   const form = useRef(null);
   const [msg, setMsg] = useState("Envoyer");
-
-  useEffect(() => {
-    document.title = "Demander un Devis gratuit | Sébastien Morazzani-Marigny";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    metaDescription?.setAttribute(
-      "content",
-      "Parlons de votre projet | Sébastien Morazzani-Marigny. Parlons de votre futur projet. Il est important d'échanger afin de mieux comprendre vos besoins et vos attentes pour délivrer un site web exceptionnel."
-    );
-  }, []);
 
   const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

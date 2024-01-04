@@ -9,12 +9,6 @@ import mouseIcon from "./assets/mouse.svg";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
-  description:
-    "Élevez votre entreprise vers de nouveaux sommets en investissant dans sa visibilité : Le pouvoir de la croissance par l'investissement stratégique. Investir dans son entrerprise, c'est avant tout avoir le pouvoir de lui donner de la visibilité.",
-};
-
 export default function Home() {
   return (
     <main className="w-full h-full text-white">
