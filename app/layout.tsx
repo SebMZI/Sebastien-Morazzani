@@ -10,6 +10,42 @@ export const metadata: Metadata = {
   description:
     "Élevez votre entreprise vers de nouveaux sommets en investissant dans sa visibilité : Le pouvoir de la croissance par l'investissement stratégique. Investir dans son entrerprise, c'est avant tout avoir le pouvoir de lui donner de la visibilité.",
   manifest: "/site.webmanifest",
+  keywords: [
+    "sébastien",
+    "morazzani",
+    "visibilité",
+    "croissance",
+    "investissement",
+    "développeur web",
+    "intégrateur web",
+    "SEO",
+    "conception",
+    "maintenance",
+    "debugging",
+    "stratégie",
+    "react",
+    "next",
+    "javascript",
+    "html",
+    "css",
+    "nodejs",
+    "sass",
+    "typescript",
+  ],
+  openGraph: {
+    title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
+    description:
+      "Élevez votre entreprise vers de nouveaux sommets en investissant dans sa visibilité : Le pouvoir de la croissance par l'investissement stratégique. Investir dans son entrerprise, c'est avant tout avoir le pouvoir de lui donner de la visibilité.",
+    url: "https://www.sebastien-morazzani.com",
+    siteName: "Sébastien Morazzani-Marigny",
+    images: [
+      {
+        url: "https://www.sebastien-morazzani.com/favicon.ico",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
