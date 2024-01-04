@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main className="w-full h-full text-white">
       <section className="my-48 relative">
-        <h1 className=" tablette:text-[60px] tablette:leading-[55px] tablette:w-3/4 phone:text-[32px] phone:leading-9">
+        <h1 className=" tablette:text-[70px] tablette:leading-[60px] tablette:w-3/4 phone:text-[32px] phone:leading-9">
           Élevez votre entreprise vers de nouveaux sommets en investissant dans
           sa <span className="text-ascent">visibilité</span> : Le pouvoir de la
           <span className="text-ascent"> croissance</span> par
@@ -38,7 +38,7 @@ export default function Home() {
       </section>
       <section id="services" className="mb-48">
         <div className=" mb-9">
-          <h2 className="text-secondary">Services</h2>
+          <h2 className="text-ascent">Services</h2>
           <p className="text-3xl">
             Différents services, pour différents besoins.
           </p>
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
       <section id="gallerie" className="mb-48">
         <div className=" mb-9">
-          <h2 className="text-secondary">Travaux</h2>
+          <h2 className="text-ascent">Travaux</h2>
           <p className="text-3xl">D’autres projets avant le vôtre.</p>
         </div>
         <div className="grid grid-cols-1 gap-4 tablette:grid-cols-2">

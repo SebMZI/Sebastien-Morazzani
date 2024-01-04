@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col tablette:flex-col-reverse">
-      <div className="tablette:flex tablette:flex-row tablette:justify-between tablette:items-end">
+    <footer className="flex flex-col tablette:flex-row pb-5">
+      <div className="tablette:flex tablette:flex-row tablette:justify-between tablette:items-end tablette:w-2/4 phone:w-full">
         <div>
           <div className="flex flex-row gap-2 items-center mb-3">
             <Image
@@ -16,7 +16,7 @@ const Footer = () => {
               alt="Photo représentant Sébastien Morazzani-Marigny"
             />
             <div className="text-white ">
-              <p>Sébastien Morazzani</p>
+              <p className="text-ascent">Sébastien Morazzani</p>
               <p className="text-secondary  ">Développeur Web</p>
             </div>
           </div>
@@ -35,57 +35,54 @@ const Footer = () => {
             </a>
           </div>
         </div>
-
-        <div className="my-8 tablette:my-0 ">
-          <ul className="text-secondary underline flex flex-row justify-between tablette:flex-col">
-            <li>
-              <Link
-                href="/"
-                className="hover:text-ascent hover:decoration-ascent"
-              >
-                Accueil
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#services"
-                className="hover:text-ascent hover:decoration-ascent"
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#gallerie"
-                className="hover:text-ascent hover:decoration-ascent"
-              >
-                Gallerie
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="hover:text-ascent hover:decoration-ascent"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
       </div>
 
-      <div className="w-full grid place-content-center tablette:flex tablette:flex-row tablette:justify-between tablette:items-center">
-        <div className="flex flex-col items-center gap-2 mb-6 ">
-          <Link href="/">
+      <div className="w-full grid place-content-center tablette:flex tablette:flex-row tablette:justify-end tablette:items-center ">
+        <div className="my-8 tablette:my-0 flex flex-col  h-full tablette:items-end tablette:justify-between phone:items-center phone:justify-around">
+          <Link href="/" className="flex flex-col items-center">
             <Image
-              className="w-32 h-32"
+              className="w-14 h-14"
               src={logoPic}
               alt="Logo Sébastien Morazzani-Marigny"
             />
             <p className="text-white text-lg text-center">SMM</p>
           </Link>
+          <p className="text-white ">© Sébastien Morazzani-Marigny - 2024</p>
         </div>
-        <p className="text-white mb-6">© Sébastien Morazzani-Marigny - 2024</p>
+        {/* <ul className="text-secondary underline flex flex-row justify-between tablette:flex-col">
+          <li>
+            <Link
+              href="/"
+              className="hover:text-ascent hover:decoration-ascent"
+            >
+              Accueil
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/#services"
+              className="hover:text-ascent hover:decoration-ascent"
+            >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/#gallerie"
+              className="hover:text-ascent hover:decoration-ascent"
+            >
+              Gallerie
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className="hover:text-ascent hover:decoration-ascent"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul> */}
       </div>
     </footer>
   );
