@@ -13,6 +13,7 @@ import Head from "next/head";
 const Contact = () => {
   const form = useRef(null);
   const [msg, setMsg] = useState("Envoyer");
+
   useEffect(() => {
     document.title = "Demander un Devis gratuit | Sébastien Morazzani-Marigny";
     const metaDescription = document.querySelector('meta[name="description"]');

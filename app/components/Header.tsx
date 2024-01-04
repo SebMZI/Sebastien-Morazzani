@@ -31,7 +31,7 @@ const Header = () => {
         />
         <ul
           onClick={() => setToggle(!toggle)}
-          className={`text-white tablette:relative tablette:flex-row gap-6 transition tablette:flex  ${
+          className={`text-white tablette:relative tablette:w-auto tablette:h-auto tablette:flex-row gap-6 transition tablette:flex  ${
             toggle
               ? "phone:flex phone:fixed phone:inset-0 phone:flex-col phone:w-screen  phone:h-screen phone:bg-primary phone:z-20 phone:justify-center phone:items-center"
               : "phone:hidden"
@@ -68,12 +68,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link
-              href="/contact"
-              className={`hover:border-b-2 hover:border-ascent ${
-                pathname == "/contact" ? "text-ascent" : ""
-              }`}
-            >
+            <Link href="/contact" className="py-2 px-3 bg-ascent rounded-lg">
               Contact
             </Link>
           </li>
