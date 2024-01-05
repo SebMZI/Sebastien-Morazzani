@@ -10,7 +10,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const pathname = usePathname();
 
-  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300 z-30`;
+  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300 z-30 tablette:hidden`;
   return (
     <header className="flex flex-row justify-between items-center">
       <div className="">
