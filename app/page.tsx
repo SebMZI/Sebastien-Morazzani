@@ -104,7 +104,7 @@ export default function Home() {
           <Services
             title="Maintenance"
             desc="Nous proposons un forfait maintenance lors de la création de votre site web. Mise à jour des librairies, support technique..."
-            delay={0.6}
+            delay={0.7}
           />
         </div>
       </section>
@@ -114,23 +114,40 @@ export default function Home() {
           <p className="text-3xl">D’autres projets avant le vôtre.</p>
         </div>
         <div className="grid grid-cols-1 gap-4 tablette:grid-cols-2">
-          <Project title="Projet X" date="2024" image={projetxMinia} link="" />
+          <Project
+            title="Projet X"
+            date="2024"
+            image={projetxMinia}
+            link=""
+            delay={0.2}
+          />
           <Project
             title="MyAuth"
             date="2023"
             image={myauthMinia}
             link="https://my-auth.netlify.app/"
+            delay={0.4}
           />
           <Project
             title="Wooflander"
             date="2023"
             image={wooflanderMinia}
             link="https://wooflander.vercel.app/"
+            delay={0.6}
           />
           <Link href="/contact">
             <motion.article
               className="w-full h-[162px] rounded-lg border-secondary border-2 grid place-content-center animate-pulse"
               whileHover={{ scale: 1.03 }}
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: 1.25,
+                  delay: 0.8,
+                  ease: "easeInOut",
+                },
+              }}
             >
               <div className="flex flex-row gap-3 ">
                 <Image

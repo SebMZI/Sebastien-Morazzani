@@ -72,7 +72,7 @@ const Contact = () => {
   };
 
   return (
-    <AnimatePresence mode="wa">
+    <AnimatePresence mode="wait">
       <motion.main
         className="text-white relative"
         variants={variants}

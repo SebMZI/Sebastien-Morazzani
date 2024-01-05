@@ -33,7 +33,7 @@ const Header = () => {
           onClick={() => setToggle(!toggle)}
           className={`text-white tablette:relative tablette:w-auto tablette:h-auto tablette:flex-row gap-6 transition tablette:flex  ${
             toggle
-              ? "phone:flex phone:fixed phone:inset-0 phone:flex-col phone:w-screen  phone:h-screen phone:bg-primary phone:z-20 phone:justify-center phone:items-center"
+              ? "phone:flex phone:fixed phone:inset-0 phone:flex-col phone:w-screen  phone:h-screen phone:bg-primary phone:z-20 phone:justify-center phone:items-center transition-all"
               : "phone:hidden"
           }`}
         >
