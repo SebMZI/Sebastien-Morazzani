@@ -120,9 +120,7 @@ const Contact = () => {
           >
             <div className="tablette:flex tablette:flex-row tablette:gap-4">
               <div className="flex flex-col gap-1 mb-3 tablette:w-2/4">
-                <label htmlFor="name">
-                  Prénom <span className="text-[#FF0000]">*</span>
-                </label>
+                <label htmlFor="name">Prénom</label>
                 <input
                   type="text"
                   id="name"
@@ -133,9 +131,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col gap-1 mb-3 tablette:w-2/4">
-                <label htmlFor="lastname">
-                  Nom <span className="text-[#FF0000]">*</span>
-                </label>
+                <label htmlFor="lastname">Nom</label>
                 <input
                   type="text"
                   name="from_lastname"
@@ -158,9 +154,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-col gap-1 mb-3 tablette:w-2/4">
-                <label htmlFor="email">
-                  Adresse mail <span className="text-[#FF0000]">*</span>
-                </label>
+                <label htmlFor="email">Adresse mail</label>
                 <input
                   type="email"
                   name="email"
@@ -171,10 +165,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <label htmlFor="message">
-              Parlez-nous de votre projet{" "}
-              <span className="text-[#FF0000]">*</span>
-            </label>
+            <label htmlFor="message">Parlez-nous de votre projet </label>
             <textarea
               required
               name="message"
