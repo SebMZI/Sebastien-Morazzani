@@ -88,7 +88,7 @@ export default function Home() {
         <div className="flex flex-col gap-5 tablette:flex-row tablette:gap-10 tablette:justify-between">
           <Services
             title="Conception"
-            desc="Nous sommes à l’écoute de vos besoin, et concevons votre site web en fonction de ceux-ci. (Site vitrine / site e-commerce, blog...)"
+            desc="Nous sommes à l’écoute de vos besoins, et concevons votre site web en fonction de ceux-ci. (Site vitrine / site e-commerce, blog...)"
             delay={0.1}
           />
           <Services

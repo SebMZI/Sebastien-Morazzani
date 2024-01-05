@@ -89,7 +89,7 @@ const Header = () => {
                 pathname == "/#gallerie" ? "text-ascent" : ""
               }`}
             >
-              Gallerie
+              Galerie
             </Link>
           </li>
           <li className="h-[48px]">

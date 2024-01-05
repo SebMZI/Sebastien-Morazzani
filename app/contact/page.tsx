@@ -216,14 +216,12 @@ const Contact = () => {
               </div>
             </div>
             <div className="mt-6  mb-20">
-              <p className="text-secondary">Organiser un appel Zoom ?</p>
-
               <a
                 href="https://calendly.com/sebastien-morazzani/reunion-zoom"
                 target="_blank"
-                className="text-ascent"
+                className="text-secondary hover:text-ascent"
               >
-                Organiser
+                Organiser un appel Zoom ?
               </a>
             </div>
           </div>
