@@ -10,6 +10,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const pathname = usePathname();
 
+  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300 z-30`;
   return (
     <header className="flex flex-row justify-between items-center">
       <div className="">
@@ -23,12 +24,36 @@ const Header = () => {
         {/* <p>Sébastien Morazzani-Marigny</p> */}
       </div>
       <nav className="flex flex-row-reverse items-center gap-2">
-        <Image
+        <button
+          className="flex flex-col h-12 w-12  justify-center items-center group"
+          onClick={() => setToggle(!toggle)}
+        >
+          <div
+            className={`${genericHamburgerLine} ${
+              toggle
+                ? "rotate-45 translate-y-3 opacity-100 group-hover:opacity-100"
+                : "opacity-100"
+            }`}
+          />
+          <div
+            className={`${genericHamburgerLine} ${
+              toggle ? "opacity-0" : "opacity-100 group-hover:opacity-100"
+            }`}
+          />
+          <div
+            className={`${genericHamburgerLine} ${
+              toggle
+                ? "-rotate-45 -translate-y-3 opacity-100 group-hover:opacity-100"
+                : "opacity-100"
+            }`}
+          />
+        </button>
+        {/* <Image
           src={menuPic}
           alt="menu burger icon"
           className={`menu-icon cursor-pointer tablette:hidden z-30`}
           onClick={() => setToggle(!toggle)}
-        />
+        /> */}
         <ul
           onClick={() => setToggle(!toggle)}
           className={`text-white tablette:relative tablette:w-auto tablette:h-auto tablette:flex-row gap-6 transition tablette:flex  ${
