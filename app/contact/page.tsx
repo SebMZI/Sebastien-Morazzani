@@ -210,7 +210,7 @@ const Contact = () => {
               <a
                 href="https://calendly.com/sebastien-morazzani/reunion-zoom"
                 target="_blank"
-                className="text-secondary hover:text-ascent"
+                className="text-ascent"
               >
                 Organiser un appel Zoom ?
               </a>
