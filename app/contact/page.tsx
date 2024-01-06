@@ -107,7 +107,7 @@ const Contact = () => {
             <h1 className="text-2xl">Parlons de votre futur projet.</h1>
             <p className="text-secondary">
               Il est important d&apos;échanger afin de mieux comprendre vos
-              besoins et vos attentes pour délivrer un site web exceptionel
+              besoins et vos attentes pour délivrer un site web exceptionnel
             </p>
           </div>
         </section>
