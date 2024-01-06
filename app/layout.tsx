@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     "maintenance continue et fiable",
     "stratégie SEO personnalisées",
     "conseils SEO pour la visibilité en ligne",
+    "morazzani-marigny",
   ],
   openGraph: {
     title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
