@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Head from "next/head";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import arrowUpPic from "./assets/arrowup.svg";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
@@ -68,9 +70,16 @@ export default function RootLayout({
 
   return (
     <html lang="fr">
-      <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto ">
+      <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto relative">
         <Header />
         {children}
+        {/* <div className="w-12 h-12 bg-ascent rounded-full grid place-content-center absolute right-0">
+          <Image
+            src={arrowUpPic}
+            alt="flèche pour retourner en haut de page"
+            className="w-8 h-8"
+          />
+        </div> */}
         <Analytics />
         <Footer />
         <script
