@@ -98,7 +98,7 @@ export default function Home() {
           />
           <Services
             title="Debugging"
-            desc="Un problème ? Un bug ? Nous nous chargons de le résoudre le plus rapidement possible pour vous rendre un site web fonctionnel."
+            desc="Un problème ? Un bug ? Nous nous chargeons de le résoudre le plus rapidement possible pour vous rendre un site web fonctionnel."
             delay={0.5}
           />
           <Services
