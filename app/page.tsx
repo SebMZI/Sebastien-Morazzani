@@ -69,7 +69,7 @@ export default function Home() {
             hidden: { y: 50, opacity: 0 },
           }}
         >
-          Investir dans son entrerprise, c&apos;est avant tout avoir le pouvoir
+          Investir dans son entreprise, c&apos;est avant tout avoir le pouvoir
           de lui donner de la visibilité.
         </motion.p>
         <Image
