@@ -28,6 +28,10 @@ export const metadata: Metadata = {
     "conseils SEO pour la visibilité en ligne",
     "morazzani-marigny",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
     description:
