@@ -9,7 +9,7 @@ import arrowUpPic from "./assets/arrowup.svg";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
+  title: "Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny",
   description:
     "Élevez votre entreprise vers de nouveaux sommets en investissant dans sa visibilité : Le pouvoir de la croissance par l'investissement stratégique. Investir dans son entrerprise, c'est avant tout avoir le pouvoir de lui donner de la visibilité.",
   manifest: "/site.webmanifest",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Augmenter votre visibilité | Sébastien Morazzani-Marigny",
+    title: "Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny",
     description:
       "Élevez votre entreprise vers de nouveaux sommets en investissant dans sa visibilité : Le pouvoir de la croissance par l'investissement stratégique. Investir dans son entrerprise, c'est avant tout avoir le pouvoir de lui donner de la visibilité.",
     url: "https://www.sebastien-morazzani.com",
