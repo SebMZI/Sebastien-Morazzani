@@ -78,6 +78,15 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto relative">
+     
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-74PJBL2MQL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-74PJBL2MQL');
+</script>
         <Header />
         {children}
         {/* <div className="w-12 h-12 bg-ascent rounded-full grid place-content-center absolute right-0">
