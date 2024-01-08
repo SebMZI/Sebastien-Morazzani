@@ -118,7 +118,7 @@ export default function Home() {
             title="Projet X"
             date="2024"
             image={projetxMinia}
-            link=""
+            link="#"
             delay={0.2}
           />
           <Project
