@@ -7,6 +7,7 @@ import { easeInOut, motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import loadingGif from "../assets/loading.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Contact = () => {
   const form = useRef(null);
@@ -207,13 +208,13 @@ const Contact = () => {
               </div>
             </div>
             <div className="mt-6  mb-20">
-              <a
+              <Link
                 href="https://calendly.com/sebastien-morazzani/reunion-zoom"
                 target="_blank"
                 className="text-ascent"
               >
                 Organiser un appel Zoom ?
-              </a>
+              </Link>
             </div>
           </div>
         </section>
