@@ -10,6 +10,7 @@ import mouseIcon from "./assets/mouse.svg";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
+import Reco from "./components/Reco";
 
 export default function Home() {
   const variants = {
@@ -158,6 +159,31 @@ export default function Home() {
               </div>
             </motion.article>
           </Link>
+        </div>
+      </section>
+      <section className="tablette:mb-48 phone:mb-40">
+        <div className=" mb-9">
+          <h2 className="text-ascent">Recommandations</h2>
+          <p className="text-3xl">Ils me recommandent.</p>
+        </div>
+        <div className="flex flex-col grid-cols-3 gap-5 tablette:flex-row tablette:gap-10 tablette:justify-between">
+          <Reco
+            title="Romane G."
+            desc="Sébastien excelle en tant que développeur frontend spécialisé dans Reactjs et Nextjs. Son expertise technique et sa créativité en font un atout inestimable pour tout projet. Il a su apporter des solutions innovantes avec efficacité. Collaborer avec lui a été une expérience positive. Recommandé vivement ! ⭐🚀"
+            delay={0.1}
+          />
+          <Reco
+            title="Damien D."
+            desc="Le savoir faire de Sébastien a été à la hauteur de mes attentes concernant le design de maquette web. Il a su contribuer à mes projets en proposant des idées pertinentes. Je recommande vivement ses prestations !"
+            delay={0.3}
+          />
+          <Reco
+            title="Mathys C."
+            desc="Je recommande vivement Sébastien en tant que développeur web.
+            Son expertise technique et son engagement envers la qualité ont grandement contribué au succès de nos projets communs.
+            Merci encore pour ton travail, à bientôt !"
+            delay={0.5}
+          />
         </div>
       </section>
     </main>
