@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "stratégie SEO personnalisées",
     "conseils SEO pour la visibilité en ligne",
     "morazzani-marigny",
+    "augmenter sa visibilité en ligne",
   ],
   icons: {
     icon: "/favicon.ico",
