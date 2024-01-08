@@ -201,9 +201,9 @@ const Contact = () => {
                 Vous souhaitez nous contacter directement ?
               </p>
               <div>
-                <a href="mailto:contact@sebastien-morazzani.com">
+                <Link href="mailto:contact@sebastien-morazzani.com">
                   contact@sebastien-morazzani.com
-                </a>{" "}
+                </Link>{" "}
                 / <a href="tel:0636377046">+33 6 36 37 70 46</a>
               </div>
             </div>
