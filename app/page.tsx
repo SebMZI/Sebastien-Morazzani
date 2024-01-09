@@ -115,13 +115,36 @@ export default function Home() {
           <p className="text-3xl">D’autres projets avant le vôtre.</p>
         </div>
         <div className="grid grid-cols-1 gap-4 tablette:grid-cols-2">
-          <Project
+          {/* <Project
             title="Projet X"
             date="2024"
             image={projetxMinia}
             link="#"
             delay={0.2}
-          />
+          /> */}
+          <motion.article
+            className="w-full h-[162px] rounded-lg cursor-pointer relative"
+            initial={{ opacity: 0 }}
+            whileHover={{ scale: 1.03 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 1.25,
+                delay: 0.2,
+                ease: "easeInOut",
+              },
+            }}
+          >
+            <div className="absolute left-0 right-0 bottom-0 z-20 bg-gradient-to-t from-[#000000f6] to-transparent rounded-lg h-3/4">
+              <h3 className="absolute left-3 text-xl bottom-7">Projet X</h3>
+              <p className="absolute left-3 bottom-3">2024 - En cours</p>
+            </div>
+            <Image
+              src={projetxMinia}
+              alt="project x picture"
+              className="rounded-lg h-[162px] object-cover"
+            />
+          </motion.article>
           <Project
             title="MyAuth"
             date="2023"
