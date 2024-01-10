@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+interface Window {
+  dataLayer: any[];
+}
 
 export default function RootLayout({
   children,
@@ -77,14 +80,6 @@ export default function RootLayout({
 
   return (
     <>
-      <Head>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag(&quot;js&quot;, new Date()); gtag(&quot;config&quot;,
-          &quot;AW-11465358312&quot;);
-        </script>
-      </Head>
       <html lang="fr">
         <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto relative">
           <Header />
@@ -98,14 +93,25 @@ export default function RootLayout({
         </div> */}
           <Analytics />
           <Footer />
-          <script
+          <Script
+            id="metadata"
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
+
           <Script
             async
             src="https://www.googletagmanager.com/gtag/js?id=AW-11465358312"
           />
+          <Script id="googlescript">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'AW-11465358312');
+           `}
+          </Script>
         </body>
       </html>
     </>
