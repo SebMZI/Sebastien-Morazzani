@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Head from "next/head";
-import Script from 'next/script'
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import arrowUpPic from "./assets/arrowup.svg";
 import Image from "next/image";
@@ -77,16 +77,14 @@ export default function RootLayout({
 
   return (
     <>
-    <Head>
-    <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11465358312" />
-<Script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11465358312');
-</Script>
-    </Head>
+      <Head>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag(&quot;js&quot;, new Date()); gtag(&quot;config&quot;,
+          &quot;AW-11465358312&quot;);
+        </script>
+      </Head>
       <html lang="fr">
         <body className="bg-primary p-4 font-syne max-w-7xl w-full m-auto relative">
           <Header />
@@ -103,6 +101,10 @@ export default function RootLayout({
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+          <Script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-11465358312"
           />
         </body>
       </html>
