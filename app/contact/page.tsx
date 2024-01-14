@@ -207,11 +207,11 @@ const Contact = () => {
             </div>
             <div className="mt-6  mb-20">
               <Link
-                href="https://calendly.com/sebastien-morazzani/reunion-zoom"
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1EXBrap0wF7oduW0JJppUbsDcqqNSKeBY94ng6yj7jgH9RVVJUx4siU3eeZB4CvywSE6aVMgoP"
                 target="_blank"
                 className="text-ascent"
               >
-                Organiser un appel Zoom ?
+                Parler de mon projet ?
               </Link>
             </div>
           </div>
