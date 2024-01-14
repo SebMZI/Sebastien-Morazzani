@@ -1,8 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import type { Metadata } from "next";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Head from "next/head";
 import { easeInOut, motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import loadingGif from "../assets/loading.svg";
@@ -203,8 +201,8 @@ const Contact = () => {
               <div>
                 <Link href="mailto:contact@sebastien-morazzani.com">
                   contact@sebastien-morazzani.com
-                </Link>{" "}
-                / <a href="tel:0636377046">+33 6 36 37 70 46</a>
+                </Link>
+                / <Link href="tel:0636377046">+33 6 36 37 70 46</Link>
               </div>
             </div>
             <div className="mt-6  mb-20">
