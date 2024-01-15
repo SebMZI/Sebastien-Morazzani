@@ -126,6 +126,7 @@ export default function Home() {
             className="w-full h-[162px] rounded-lg cursor-pointer relative"
             initial={{ opacity: 0 }}
             whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
             whileInView={{
               opacity: 1,
               transition: {
@@ -164,6 +165,7 @@ export default function Home() {
               className="w-full h-[162px] rounded-lg border-secondary border-2 grid place-content-center animate-pulse"
               whileHover={{ scale: 1.03 }}
               initial={{ opacity: 0 }}
+              viewport={{ once: true }}
               whileInView={{
                 opacity: 1,
                 transition: {
@@ -189,7 +191,7 @@ export default function Home() {
           <h2 className="text-ascent">Recommandations</h2>
           <p className="text-3xl">Ils me recommandent.</p>
         </div>
-        <div className="flex flex-col grid-cols-3 gap-5 tablette:flex-row tablette:gap-10 tablette:justify-between">
+        <div className="grid grid-cols-1 gap-5 tablette:grid-cols-3 tablette:gap-10 tablette:justify-between">
           <Reco
             title="Romane G."
             desc="Sébastien excelle en tant que développeur frontend spécialisé dans Reactjs et Nextjs. Son expertise technique et sa créativité en font un atout inestimable pour tout projet. Il a su apporter des solutions innovantes avec efficacité. Collaborer avec lui a été une expérience positive. Recommandé vivement ! ⭐🚀"
@@ -206,6 +208,25 @@ export default function Home() {
             Son expertise technique et son engagement envers la qualité ont grandement contribué au succès de nos projets communs.
             Merci encore pour ton travail, à bientôt !"
             delay={0.5}
+          />
+          <Reco
+            title="Gotin G."
+            desc="Je recommande vivement Sébastien en tant que développeur web spécialisé dans React. Travailler avec lui a été une expérience exceptionnelle. Sa maîtrise de React et sa capacité à produire un code propre et efficace ont grandement contribué au succès de nos projets. Sébastien est proactif, fiable et toujours prêt à relever de nouveaux défis. Engagez-le en toute confiance pour des résultats de qualité.
+
+            "
+            delay={0.7}
+          />
+          <Reco
+            title="Lucas S."
+            desc="Sébastien allie compétences techniques et créativité.
+            Sa maîtrise des technologies front-end et back-end, combinée à une personnalité joyeuse et curieuse, rend chaque projet à la fois innovant et agréable.
+            Je recommande vivement Sébastien pour son professionnalisme et son approche."
+            delay={0.9}
+          />
+          <Reco
+            title="Anaîs R."
+            desc="Je recommande vivement Sébastien pour son excellence créative, son approche polyvalente, ainsi que son professionnalisme et son engagement dans ses projets."
+            delay={1.1}
           />
         </div>
       </section>

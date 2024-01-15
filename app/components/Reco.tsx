@@ -34,6 +34,7 @@ const Reco = ({ title, desc, delay }: props) => {
       variants={property}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       ref={serviceRef}
     >
       <h3 className="text-2xl mb-1">{title}</h3>

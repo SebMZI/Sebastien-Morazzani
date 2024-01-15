@@ -29,6 +29,7 @@ const Project = ({ title, date, image, link, delay }: props) => {
     <Link href={link ? link : "#"} target={link ? "_blank" : ""}>
       <motion.article
         variants={property}
+        viewport={{ once: true }}
         initial="hidden"
         whileInView="show"
         className="w-full h-[162px] rounded-lg cursor-pointer relative"

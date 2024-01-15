@@ -32,6 +32,7 @@ const Services = ({ title, desc, delay }: props) => {
   return (
     <motion.article
       variants={property}
+      viewport={{ once: true }}
       initial="hidden"
       whileInView="show"
       ref={serviceRef}
