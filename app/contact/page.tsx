@@ -12,6 +12,7 @@ const Contact = () => {
   const [spin, setSpin] = useState(false);
   const [modal, setModal] = useState(false);
   const [msg, setMsg] = useState("Rien");
+  const [toggleRdv, setToggleRdv] = useState(false);
   const variants = {
     out: {
       opacity: 0,
@@ -206,13 +207,25 @@ const Contact = () => {
               </div>
             </div>
             <div className="mt-6  mb-20">
-              <Link
-                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1EXBrap0wF7oduW0JJppUbsDcqqNSKeBY94ng6yj7jgH9RVVJUx4siU3eeZB4CvywSE6aVMgoP"
-                target="_blank"
-                className="text-ascent"
+              <div
+                className={toggleRdv ? "overlay" : ""}
+                onClick={() => setToggleRdv(false)}
+              ></div>
+              {toggleRdv ? (
+                <iframe
+                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1EXBrap0wF7oduW0JJppUbsDcqqNSKeBY94ng6yj7jgH9RVVJUx4siU3eeZB4CvywSE6aVMgoP?gv=true"
+                  style={{ border: 0 }}
+                  className="bg-white absolute top-0 rounded-lg z-50"
+                  width="100%"
+                  height="600"
+                ></iframe>
+              ) : null}
+              <p
+                className="text-ascent cursor-pointer"
+                onClick={() => setToggleRdv(true)}
               >
                 Parler de mon projet ?
-              </Link>
+              </p>
             </div>
           </div>
         </section>
