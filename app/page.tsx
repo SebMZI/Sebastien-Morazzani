@@ -11,6 +11,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import Reco from "./components/Reco";
+import Head from "next/head";
 
 export default function Home() {
   const variants = {
@@ -33,6 +34,12 @@ export default function Home() {
 
   return (
     <main className="w-full h-full text-white">
+      <Head>
+        <title>
+          Demander un Devis Web gratuit | Sébastien Morazzani-Marigny
+        </title>
+        <Link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      </Head>
       <section className="tablette:my-48 relative phone:my-40">
         <motion.h1
           className=" tablette:text-[70px] tablette:leading-[60px] tablette:w-3/4 phone:text-[32px] phone:leading-9"

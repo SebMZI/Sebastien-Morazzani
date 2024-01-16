@@ -80,6 +80,12 @@ const Contact = () => {
         animate="in"
         exit="out"
       >
+        <Head>
+          <title>
+            Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny
+          </title>
+          <Link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        </Head>
         {modal ? (
           <motion.div
             className={`absolute top-[-50px] left-2/4  py-4 px-20 text-white  text-center rounded-sm ${
