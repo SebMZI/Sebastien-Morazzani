@@ -230,6 +230,31 @@ export default function Home() {
           />
         </div>
       </section>
+      <section className="tablette:mb-28 phone:mb-40">
+        <div className=" mb-9">
+          <h2 className="text-ascent">Contact</h2>
+          <p className="text-3xl">On parle de votre projet ?</p>
+        </div>
+        <Link href="/contact">
+          <motion.button
+            className="bg-ascent text-whites py-3 px-10 rounded-lg"
+            initial={{ opacity: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 1.25,
+                delay: 0.2,
+                ease: "easeInOut",
+              },
+            }}
+          >
+            Prendre rendez-vous
+          </motion.button>
+        </Link>
+      </section>
     </main>
   );
 }
