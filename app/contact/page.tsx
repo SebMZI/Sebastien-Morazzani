@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import loadingGif from "../assets/loading.svg";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 const Contact = () => {
   const form = useRef(null);
