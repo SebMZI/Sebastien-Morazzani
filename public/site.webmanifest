@@ -1,19 +1,25 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny",
+  "description": "Élevez votre entreprise vers de nouveaux sommets en investissant dans sa visibilité : Le pouvoir de la croissance par l'investissement stratégique. Investir dans son entrerprise, c'est avant tout avoir le pouvoir de lui donner de la visibilité.",
+  "short_name": "S.M.M.",
+  "start_url": "/",
+  "lang": "fr-FR",
+  "theme_color": "#130E0A",
+  "display": "standalone",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
+      "src": "https://www.sebastien-morazzani.com/favicon.ico",
+      "sizes": "100x100"
+    },
+    {
+      "src": "https://www.sebastien-morazzani.com/favicon-16x16.png",
+      "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
+      "src": "https://www.sebastien-morazzani.com/favicon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }
