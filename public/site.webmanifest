@@ -5,8 +5,15 @@
   "start_url": "/",
   "lang": "fr-FR",
   "theme_color": "#130E0A",
+  "background_color": "#130E0A",
   "display": "standalone",
   "icons": [
+    {
+      "src": "https://www.sebastien-morazzani.com/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "https://www.sebastien-morazzani.com/favicon-256x256.png",
       "sizes": "256x256",

@@ -48,6 +48,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     type: "website",
   },
+  themeColor: "#130E0A",
 };
 interface Window {
   dataLayer: any[];
