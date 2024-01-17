@@ -38,6 +38,7 @@ export default function Home() {
         <title>
           Demander un Devis Web gratuit | Sébastien Morazzani-Marigny
         </title>
+        <meta name="theme-color" content="#130E0A" />
         <Link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <section className="tablette:my-48 relative phone:my-40">
