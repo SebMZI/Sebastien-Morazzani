@@ -15,6 +15,12 @@
       "purpose": "any"
     },
     {
+      "src": "https://www.sebastien-morazzani.com/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
       "src": "https://www.sebastien-morazzani.com/favicon-256x256.png",
       "sizes": "256x256",
       "type": "image/png",
