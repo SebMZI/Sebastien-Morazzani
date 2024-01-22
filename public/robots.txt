@@ -1,2 +1,2 @@
 User-agent: *
-Disallow:
+Sitemap: https://www.sebastien-morazzani.com/sitemap.xml
