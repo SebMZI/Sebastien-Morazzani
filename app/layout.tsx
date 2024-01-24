@@ -110,6 +110,7 @@ export default function RootLayout({
               </svg>
             </a>
           </div>
+
           {children}
           {/* <div className="w-12 h-12 bg-ascent rounded-full grid place-content-center absolute right-0">
           <Image
