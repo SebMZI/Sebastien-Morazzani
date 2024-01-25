@@ -48,9 +48,12 @@ const Footer = () => {
             <p className="text-white text-lg text-center">SMM</p>
           </Link>
           <div className="text-white ">
-            <div className="text-right">
+            <div className="text-right flex flex-row gap-3 justify-end">
               <Link href={"/CGV"} className="underline">
-                Conditions Générales de Services
+                CGS
+              </Link>
+              <Link href={"/mentions-legales"} className="underline">
+                Mentions Légales
               </Link>
             </div>
             <p>© Sébastien Morazzani-Marigny - 2024</p>
