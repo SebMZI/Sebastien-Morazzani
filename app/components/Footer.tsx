@@ -47,7 +47,14 @@ const Footer = () => {
             />
             <p className="text-white text-lg text-center">SMM</p>
           </Link>
-          <p className="text-white ">© Sébastien Morazzani-Marigny - 2024</p>
+          <div className="text-white ">
+            <div className="text-right">
+              <Link href={"/CGV"} className="underline">
+                Conditions Générales de Services
+              </Link>
+            </div>
+            <p>© Sébastien Morazzani-Marigny - 2024</p>
+          </div>
         </div>
         {/* <ul className="text-secondary underline flex flex-row justify-between tablette:flex-col">
           <li>
