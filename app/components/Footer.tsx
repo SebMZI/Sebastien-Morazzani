@@ -51,12 +51,12 @@ const Footer = () => {
             />
             <p className="text-white text-lg text-center">SMM</p>
           </Link>
-          <WebsiteCarbonBadge
+          {/* <WebsiteCarbonBadge
             lang="fr"
             dark={true}
             co2="0.22"
             percentage="77"
-          />
+          /> */}
           <div className="text-white ">
             <div className="text-right flex flex-row gap-3 tablette:justify-end phone:justify-center">
               <Link href={"/CGV"} className="underline">
