@@ -42,7 +42,7 @@ export default function Home() {
         <meta name="theme-color" content="#130E0A" />
         <Link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
-      <section className="tablette:my-48 relative phone:my-24 mb-60">
+      <section className="tablette:my-48 relative phone:mt-24 phone:mb-60">
         <motion.h1
           className=" tablette:text-[70px] tablette:leading-[60px] tablette:w-3/4 phone:text-[32px] phone:leading-9"
           initial="hidden"
