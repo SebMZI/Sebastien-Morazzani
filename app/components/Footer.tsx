@@ -52,7 +52,7 @@ const Footer = () => {
             <p className="text-white text-lg text-center">SMM</p>
           </Link>
           <WebsiteCarbonBadge
-            url="https://www.sebastien-morazzani.com/"
+            url="sebastien-morazzani.com"
             lang="fr"
             dark={true}
           />
