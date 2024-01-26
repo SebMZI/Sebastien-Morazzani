@@ -3,6 +3,7 @@ import logoPic from "../assets/logo_pic.png";
 import Image from "next/image";
 import profilePic from "../assets/profile_pic.jpg";
 import Link from "next/link";
+import Script from "next/script";
 
 const Footer = () => {
   return (
@@ -47,6 +48,11 @@ const Footer = () => {
             />
             <p className="text-white text-lg text-center">SMM</p>
           </Link>
+          <div id="wcb" className="carbonbadge wcb-d"></div>
+          <Script
+            src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js"
+            defer
+          />
           <div className="text-white ">
             <div className="text-right flex flex-row gap-3 tablette:justify-end phone:justify-center">
               <Link href={"/CGV"} className="underline">
