@@ -56,9 +56,9 @@ const Header = () => {
         /> */}
         <ul
           onClick={() => setToggle(!toggle)}
-          className={`text-white tablette:relative tablette:w-auto tablette:h-auto tablette:flex-row gap-6 transition tablette:flex  ${
+          className={`text-white tablette:relative tablette:w-auto tablette:h-auto tablette:flex-row gap-6 transition tablette:flex justify-center items-center ${
             toggle
-              ? "phone:flex phone:fixed phone:inset-0 phone:flex-col phone:w-screen  phone:h-screen phone:bg-primary phone:z-20 phone:justify-center phone:items-center transition-all"
+              ? "phone:flex phone:fixed phone:inset-0 phone:flex-col phone:w-screen  phone:h-screen phone:bg-primary phone:z-20   transition-all"
               : "phone:hidden"
           }`}
         >
@@ -95,9 +95,9 @@ const Header = () => {
           <li className="h-[48px]">
             <Link
               href="/contact"
-              className="py-2 px-3 bg-ascent rounded-lg text-lg"
+              className="py-2 px-3 bg-ascent rounded-lg  uppercase"
             >
-              Contact
+              Réservez un meeting
             </Link>
           </li>
         </ul>

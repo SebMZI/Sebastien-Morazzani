@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import Reco from "./components/Reco";
 import Head from "next/head";
+import Contact from "./components/Contact";
 
 export default function Home() {
   const variants = {
@@ -238,7 +239,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="tablette:mb-28 phone:mb-40">
+      <Contact />
+      {/* <section className="tablette:mb-28 phone:mb-40">
         <div className=" mb-9">
           <h2 className="text-ascent">Contact</h2>
           <p className="text-3xl">On parle de votre projet ?</p>
@@ -262,7 +264,7 @@ export default function Home() {
             Prendre rendez-vous
           </motion.button>
         </Link>
-      </section>
+      </section> */}
     </main>
   );
 }

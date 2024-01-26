@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="text-white ">
             <div className="text-right flex flex-row gap-3 justify-end">
               <Link href={"/CGV"} className="underline">
-                CGS
+                CGV
               </Link>
               <Link href={"/mentions-legales"} className="underline">
                 Mentions Légales

@@ -12,8 +12,8 @@ const Contact = () => {
   const form = useRef(null);
   const [spin, setSpin] = useState(false);
   const [modal, setModal] = useState(false);
-  const [msg, setMsg] = useState("Rien");
-  const [toggleRdv, setToggleRdv] = useState(false);
+  const [msg, setMsg] = useState("");
+  const [toggleRdv, setToggleRdv] = useState(true);
   const variants = {
     out: {
       opacity: 0,
@@ -231,7 +231,7 @@ const Contact = () => {
                 className="text-ascent cursor-pointer"
                 onClick={() => setToggleRdv(true)}
               >
-                Parler de mon projet ?
+                Prendre un rendez-vous Google Meet
               </p>
             </div>
           </div>
