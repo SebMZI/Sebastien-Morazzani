@@ -66,7 +66,7 @@ const Footer = () => {
                 Mentions Légales
               </Link>
             </div>
-            <p>© Sébastien Morazzani-Marigny - 2024</p>
+            <p>© Tous droits réservés Sébastien Morazzani-Marigny - 2024</p>
           </div>
         </div>
       </div>
