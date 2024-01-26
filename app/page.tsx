@@ -42,7 +42,7 @@ export default function Home() {
         <meta name="theme-color" content="#130E0A" />
         <Link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
-      <section className="tablette:my-48 relative phone:my-28">
+      <section className="tablette:my-48 relative phone:my-24">
         <motion.h1
           className=" tablette:text-[70px] tablette:leading-[60px] tablette:w-3/4 phone:text-[32px] phone:leading-9"
           initial="hidden"
@@ -85,7 +85,7 @@ export default function Home() {
         <Image
           src={mouseIcon}
           alt="Mouse icon scroll"
-          className="animate-bounce w-8 h-8 absolute bottom-[-125px] left-2/4"
+          className="animate-bounce w-8 h-8 absolute bottom-[-75px] left-2/4"
         />
       </section>
       <section id="services" className="tablette:mb-48 phone:mb-40">
