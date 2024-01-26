@@ -132,7 +132,7 @@ export default function Home() {
             delay={0.2}
           /> */}
           <motion.article
-            className="w-full h-[162px] rounded-lg cursor-pointer relative"
+            className="w-full h-52 rounded-lg cursor-pointer relative"
             initial={{ opacity: 0 }}
             whileHover={{ scale: 1.03 }}
             viewport={{ once: true }}
@@ -152,7 +152,7 @@ export default function Home() {
             <Image
               src={projetxMinia}
               alt="project x picture"
-              className="rounded-lg h-[162px] object-cover"
+              className="rounded-lg h-52 object-cover"
             />
           </motion.article>
           <Project
@@ -171,7 +171,7 @@ export default function Home() {
           />
           <Link href="/contact">
             <motion.article
-              className="w-full h-[162px] rounded-lg border-secondary border-2 grid place-content-center animate-pulse"
+              className="w-full h-52 rounded-lg border-secondary border-2 grid place-content-center animate-pulse"
               whileHover={{ scale: 1.03 }}
               initial={{ opacity: 0 }}
               viewport={{ once: true }}
@@ -219,7 +219,7 @@ export default function Home() {
             delay={0.5}
           />
           <Reco
-            title="Gotin G."
+            title="Hugo G."
             desc="Je recommande vivement Sébastien en tant que développeur web spécialisé dans React. Travailler avec lui a été une expérience exceptionnelle. Sa maîtrise de React et sa capacité à produire un code propre et efficace ont grandement contribué au succès de nos projets. Sébastien est proactif, fiable et toujours prêt à relever de nouveaux défis. Engagez-le en toute confiance pour des résultats de qualité.
 
             "

@@ -32,10 +32,10 @@ const Project = ({ title, date, image, link, delay }: props) => {
         viewport={{ once: true }}
         initial="hidden"
         whileInView="show"
-        className="w-full h-[162px] rounded-lg cursor-pointer relative"
+        className="w-full h-52 rounded-lg cursor-pointer relative"
         whileHover={{ scale: 1.03 }}
       >
-        <div className="absolute left-0 right-0 bottom-0 z-20 bg-gradient-to-t from-[#000000f6] to-transparent rounded-lg h-3/4">
+        <div className="absolute left-0 right-0 bottom-0 z-20 bg-gradient-to-t from-[#000000de] to-transparent rounded-lg h-3/4">
           <h3 className="absolute left-3 text-xl bottom-7">{title}</h3>
           <p className="absolute left-3 bottom-3">
             {date} - {date}
@@ -43,7 +43,7 @@ const Project = ({ title, date, image, link, delay }: props) => {
         </div>
         <Image
           src={image}
-          className="rounded-lg h-[162px] object-cover"
+          className="rounded-lg h-52 object-cover"
           alt={`Image de ${title} créer par Sébastien Morazzani-Marigny`}
         />
       </motion.article>

@@ -48,7 +48,7 @@ const Footer = () => {
             <p className="text-white text-lg text-center">SMM</p>
           </Link>
           <div className="text-white ">
-            <div className="text-right flex flex-row gap-3 justify-end">
+            <div className="text-right flex flex-row gap-3 tablette:justify-end phone:justify-center">
               <Link href={"/CGV"} className="underline">
                 CGV
               </Link>
@@ -59,40 +59,6 @@ const Footer = () => {
             <p>© Sébastien Morazzani-Marigny - 2024</p>
           </div>
         </div>
-        {/* <ul className="text-secondary underline flex flex-row justify-between tablette:flex-col">
-          <li>
-            <Link
-              href="/"
-              className="hover:text-ascent hover:decoration-ascent"
-            >
-              Accueil
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#services"
-              className="hover:text-ascent hover:decoration-ascent"
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#gallerie"
-              className="hover:text-ascent hover:decoration-ascent"
-            >
-              Gallerie
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              className="hover:text-ascent hover:decoration-ascent"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul> */}
       </div>
     </footer>
   );
