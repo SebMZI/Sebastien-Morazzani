@@ -54,8 +54,6 @@ const Footer = () => {
           <WebsiteCarbonBadge
             url="https://www.sebastien-morazzani.com/"
             lang="fr"
-            co2="0.22"
-            percentage="77"
             dark={true}
           />
           <div className="text-white ">
