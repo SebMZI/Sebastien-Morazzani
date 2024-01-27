@@ -40,7 +40,7 @@ export default function Home() {
       </Head>
       <section className="tablette:my-48 relative phone:mt-24 phone:mb-60">
         <motion.h1
-          className=" tablette:text-[70px] tablette:leading-[60px] tablette:w-3/4 phone:text-[32px] phone:leading-9"
+          className=" tablette:text-[70px] tablette:leading-[67px] tablette:w-5/6 phone:text-[32px] phone:leading-9"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -54,11 +54,10 @@ export default function Home() {
             hidden: { y: 50, opacity: 0 },
           }}
         >
-          Élevez votre entreprise vers de nouveaux sommets en investissant dans
-          sa <span className="text-ascent">visibilité</span> : Le pouvoir de la
-          <span className="text-ascent"> croissance</span> par
-          l&apos;investissement <span className="text-ascent">stratégique</span>
-          .
+          Accélérez votre <span className="text-ascent">Productivité</span> ,
+          Amplifiez votre <span className="text-ascent">Croissance</span> et
+          Rayonnez en <span className="text-ascent">ligne</span> grâce à nos
+          Solutions Web Personnalisées.
         </motion.h1>
         <motion.p
           className="mt-8 text-secondary tablette:w-2/4 text-2xl"
