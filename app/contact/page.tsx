@@ -109,7 +109,7 @@ const Contact = () => {
             {msg}
           </motion.div>
         ) : null}
-        <section className="my-20">
+        <section className="mt-20 tablette:mb-28  phone:mb-20">
           <div className="w-2/4">
             <h1 className="text-2xl">Parlons de votre futur projet.</h1>
             <p className="text-secondary">
