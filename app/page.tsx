@@ -36,10 +36,6 @@ export default function Home() {
   return (
     <main className="w-full h-full text-white">
       <Head>
-        <title>
-          Demander un Devis Web gratuit | Sébastien Morazzani-Marigny
-        </title>
-        <meta name="theme-color" content="#130E0A" />
         <Link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <section className="tablette:my-48 relative phone:mt-24 phone:mb-60">
@@ -90,38 +86,38 @@ export default function Home() {
       </section>
       <section id="services" className="tablette:mb-48 phone:mb-40">
         <div className=" mb-9">
-          <h2 className="text-ascent">Services</h2>
+          <h2 className="text-ascent uppercase">Services</h2>
           <p className="text-3xl">
-            Différents services, pour différents besoins.
+            Un accompagnement personnalisé pour vos besoins.
           </p>
         </div>
         <div className="flex flex-col gap-5 tablette:flex-row tablette:gap-10 tablette:justify-between">
           <Services
             title="Conception"
-            desc="Nous sommes à l’écoute de vos besoins, et concevons votre site web en fonction de ceux-ci. (Site vitrine / site e-commerce, blog...)"
+            desc="Nous concevons et refondons des sites web sur mesure, qu'il s'agisse de sites vitrines, d'e-commerce ou de blogs, en répondant parfaitement à vos besoins."
             delay={0.1}
           />
           <Services
             title="SEO"
-            desc="Pour donner encore plus de visibilité à votre entreprise, nous optimisons le référencement sur les moteurs de recherche. (Optimisation de la vitesse, des images)"
+            desc="Nous maximisons votre visibilité en optimisant le référencement sur les moteurs de recherche, incluant l'optimisation de la vitesse et des images."
             delay={0.3}
           />
           <Services
             title="Debugging"
-            desc="Un problème ? Un bug ? Nous nous chargeons de le résoudre le plus rapidement possible pour vous rendre un site web fonctionnel."
+            desc="Problème ou bug ? Nous réparons votre site web rapidement pour le rendre fonctionnel de nouveau."
             delay={0.5}
           />
           <Services
-            title="Maintenance"
-            desc="Nous proposons un forfait maintenance lors de la création de votre site web. Mise à jour des librairies, support technique..."
+            title="Services Client"
+            desc="Optez pour notre forfait de maintenance lors de la création de votre site web, incluant mises à jour des librairies et support technique complet."
             delay={0.7}
           />
         </div>
       </section>
       <section id="gallerie" className="tablette:mb-48 phone:mb-40">
         <div className=" mb-9">
-          <h2 className="text-ascent">Travaux</h2>
-          <p className="text-3xl">D’autres projets avant le vôtre.</p>
+          <h2 className="text-ascent uppercase">Travaux</h2>
+          <p className="text-3xl">Quelques projets avant le vôtre.</p>
         </div>
         <div className="grid grid-cols-1 gap-4 tablette:grid-cols-2">
           {/* <Project
@@ -197,8 +193,8 @@ export default function Home() {
       </section>
       <section className="tablette:mb-48 phone:mb-40">
         <div className=" mb-9">
-          <h2 className="text-ascent">Recommandations</h2>
-          <p className="text-3xl">Ils me recommandent.</p>
+          <h2 className="text-ascent uppercase">Recommandations</h2>
+          <p className="text-3xl">Ils nous recommandent.</p>
         </div>
         <div className="grid grid-cols-1 gap-5 tablette:grid-cols-3 tablette:gap-10 tablette:justify-between">
           <Reco

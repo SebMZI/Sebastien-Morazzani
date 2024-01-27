@@ -5,6 +5,7 @@ import logoPic from "../assets/logo_pic.png";
 import menuPic from "../assets/menu.svg";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,12 +15,16 @@ const Header = () => {
   return (
     <header className="flex flex-row justify-between items-center">
       <div className="">
-        <Link href="/">
+        <Link
+          href="/"
+          className="flex flex-row text-white justify-center items-center"
+        >
           <Image
             className="w-16 h-16 relative left-[-10px]"
             src={logoPic}
             alt="Sebastien Morazzani-Marigny logo"
           />
+          <p className="text-xl tablette:block phone:hidden">SMM</p>
         </Link>
         {/* <p>Sébastien Morazzani-Marigny</p> */}
       </div>
@@ -92,14 +97,14 @@ const Header = () => {
               Galerie
             </Link>
           </li>
-          <li>
+          <motion.li whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
             <Link
               href="/contact"
-              className="py-2 px-3 bg-ascent rounded-lg  uppercase"
+              className="py-3 px-4 bg-gradient-to-r to-[#7E6EAF] from-ascent rounded-lg  uppercase"
             >
               Réservez un meeting
             </Link>
-          </li>
+          </motion.li>
         </ul>
       </nav>
     </header>

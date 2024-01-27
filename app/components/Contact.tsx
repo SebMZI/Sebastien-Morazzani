@@ -5,7 +5,21 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className="tablette:mb-28 phone:mb-40 bg-gradient-to-r to-[#7E6EAF] from-ascent rounded-lg px-6 py-10">
+    <motion.section
+      className="tablette:mb-28 phone:mb-40 bg-gradient-to-r to-[#7E6EAF] from-ascent rounded-lg px-6 py-10"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{
+        duration: 1.2,
+        ease: [0.17, 0.67, 0.83, 0.91],
+        delay: 0.25,
+      }}
+      variants={{
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }}
+    >
       <h2 className="text-3xl font-semibold mb-2">Parlons de votre projet !</h2>
       <p className="mb-8">Échanger pour mieux comprendre vos besoins.</p>
       <div className="flex tablette:flex-row gap-8 phone:flex-col ">
@@ -34,7 +48,7 @@ const Contact = () => {
           </motion.button>
         </Link>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

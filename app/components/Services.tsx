@@ -36,6 +36,7 @@ const Services = ({ title, desc, delay }: props) => {
       initial="hidden"
       whileInView="show"
       ref={serviceRef}
+      className="tablette:w-[300px]"
     >
       <h3 className="text-2xl mb-1">{title}</h3>
       <p className="text-secondary text-justify">{desc}</p>
