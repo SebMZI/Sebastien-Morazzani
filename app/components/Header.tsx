@@ -62,7 +62,7 @@ const Header = () => {
               : "phone:hidden"
           }`}
         >
-          <li className=" h-[48px]">
+          <li>
             <Link
               href="/"
               className={`hover:border-b-2 hover:border-ascent text-lg  ${
@@ -72,7 +72,7 @@ const Header = () => {
               Accueil
             </Link>
           </li>
-          <li className="h-[48px]">
+          <li>
             <Link
               href="/#services"
               className={`hover:border-b-2 hover:border-ascent text-lg ${
@@ -82,7 +82,7 @@ const Header = () => {
               Services
             </Link>
           </li>
-          <li className="h-[48px]">
+          <li>
             <Link
               href="/#gallerie"
               className={`hover:border-b-2 hover:border-ascent text-lg ${
@@ -92,7 +92,7 @@ const Header = () => {
               Galerie
             </Link>
           </li>
-          <li className="h-[48px]">
+          <li>
             <Link
               href="/contact"
               className="py-2 px-3 bg-ascent rounded-lg  uppercase"
