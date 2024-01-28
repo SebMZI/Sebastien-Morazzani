@@ -6,10 +6,28 @@ import menuPic from "../assets/menu.svg";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import TagManager from "react-gtm-module";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const pathname = usePathname();
+  const gtmId = "GTM-WDHKHJXB";
+
+  const initializeGTM = (gtmId: string) => {
+    TagManager.initialize({ gtmId });
+  };
+
+  const handleMeeting = () => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: "click_meeting",
+      },
+    });
+  };
+
+  useEffect(() => {
+    initializeGTM(gtmId);
+  }, [gtmId]);
 
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300 z-30 tablette:hidden`;
   return (
@@ -97,12 +115,16 @@ const Header = () => {
               Galerie
             </Link>
           </li>
-          <motion.li whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.9 }}>
+          <motion.li
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={handleMeeting}
+          >
             <Link
               href="/contact"
               className="py-3 px-4 bg-gradient-to-r to-[#7E6EAF] from-ascent rounded-lg  uppercase"
             >
-              Réservez un meeting
+              Réserver un meeting
             </Link>
           </motion.li>
         </ul>
