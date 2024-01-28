@@ -9,5 +9,5 @@ export const initializeGTM = (gtmId : string) => {
 export const useGTM = (gtmId : string) => {
   useEffect(() => {
     initializeGTM(gtmId);
-  }, []);
+  }, [gtmId]);
 };
