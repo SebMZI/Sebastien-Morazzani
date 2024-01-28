@@ -10,12 +10,6 @@ import arrowUpPic from "./assets/arrowup.svg";
 import Image from "next/image";
 import TagManager from "react-gtm-module";
 
-const tagManagerArgs = {
-  gtmId: "GTM-WDHKHJXB",
-};
-
-TagManager.initialize(tagManagerArgs);
-
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny",
   description:
@@ -67,6 +61,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const tagManagerArgs = {
+    gtmId: "GTM-WDHKHJXB",
+  };
+
+  TagManager.initialize(tagManagerArgs);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
