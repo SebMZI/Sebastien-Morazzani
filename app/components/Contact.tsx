@@ -23,7 +23,11 @@ const Contact = () => {
       <h2 className="text-3xl font-semibold mb-2">Parlons de votre projet !</h2>
       <p className="mb-8">Échanger pour mieux comprendre vos besoins.</p>
       <div className="flex tablette:flex-row gap-8 phone:flex-col ">
-        <Link href={"/contact"} className=" grid place-content-center ">
+        <Link
+          href={"/contact"}
+          className=" grid place-content-center"
+          id="rendez-vous"
+        >
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.9 }}
@@ -33,7 +37,11 @@ const Contact = () => {
             Prendre rendez-vous
           </motion.button>
         </Link>
-        <Link href={"tel:0636377046"} className=" grid place-content-center">
+        <Link
+          href={"tel:0636377046"}
+          className=" grid place-content-center"
+          id="telephone"
+        >
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.9 }}
