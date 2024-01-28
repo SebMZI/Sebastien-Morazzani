@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { easeInOut, motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
@@ -7,8 +7,19 @@ import loadingGif from "../assets/loading.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
+import TagManager from "react-gtm-module";
 
 const Contact = () => {
+  const gtmId = "GTM-WDHKHJXB";
+
+  const initializeGTM = (gtmId: string) => {
+    TagManager.initialize({ gtmId });
+  };
+
+  useEffect(() => {
+    initializeGTM(gtmId);
+  }, [gtmId]);
+
   const form = useRef(null);
   const [spin, setSpin] = useState(false);
   const [modal, setModal] = useState(false);

@@ -10,7 +10,6 @@ import arrowUpPic from "./assets/arrowup.svg";
 import Image from "next/image";
 import TagManager from "react-gtm-module";
 import { useEffect } from "react";
-import { useGTM } from "./components/gtm";
 
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny",
@@ -63,10 +62,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const GTM_ID = "GTM-WDHKHJXB";
-
-  useGTM(GTM_ID);
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
