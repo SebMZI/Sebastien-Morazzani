@@ -1,4 +1,3 @@
-"use client";
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
@@ -11,6 +10,7 @@ import arrowUpPic from "./assets/arrowup.svg";
 import Image from "next/image";
 import TagManager from "react-gtm-module";
 import { useEffect } from "react";
+import { useGTM } from "./components/gtm";
 
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny",
@@ -65,13 +65,7 @@ export default function RootLayout({
 }) {
   const GTM_ID = "GTM-WDHKHJXB";
 
-  const initializeGTM = () => {
-    TagManager.initialize({ gtmId: GTM_ID });
-  };
-
-  useEffect(() => {
-    initializeGTM();
-  }, []);
+  useGTM(GTM_ID);
 
   const jsonLd = {
     "@context": "https://schema.org",
