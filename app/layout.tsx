@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Head from "next/head";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import arrowUpPic from "./assets/arrowup.svg";
 import Image from "next/image";
 
@@ -120,6 +121,7 @@ export default function RootLayout({
           />
         </div> */}
           <Analytics />
+          <GoogleAnalytics gaId="G-M2ZXD9Y658" />
           <Footer />
           <Script
             id="metadata"
