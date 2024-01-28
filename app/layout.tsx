@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import arrowUpPic from "./assets/arrowup.svg";
 import Image from "next/image";
 import TagManager from "react-gtm-module";
+import { useEffect } from "react";
 
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny",
@@ -61,11 +62,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const tagManagerArgs = {
-    gtmId: "GTM-WDHKHJXB",
+  const GTM_ID = "GTM-WDHKHJXB";
+
+  const initializeGTM = () => {
+    TagManager.initialize({ gtmId: GTM_ID });
   };
 
-  TagManager.initialize(tagManagerArgs);
+  useEffect(() => {
+    initializeGTM();
+  }, []);
 
   const jsonLd = {
     "@context": "https://schema.org",
