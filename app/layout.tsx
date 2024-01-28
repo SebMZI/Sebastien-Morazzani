@@ -8,6 +8,13 @@ import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import arrowUpPic from "./assets/arrowup.svg";
 import Image from "next/image";
+import TagManager from "react-gtm-module";
+
+const tagManagerArgs = {
+  gtmId: "GTM-WDHKHJXB",
+};
+
+TagManager.initialize(tagManagerArgs);
 
 export const metadata: Metadata = {
   title: "Augmenter votre visibilité en ligne | Sébastien Morazzani-Marigny",
