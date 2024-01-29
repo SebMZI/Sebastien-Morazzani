@@ -232,11 +232,16 @@ const Contact = () => {
               ></div>
               {toggleRdv ? (
                 <iframe
-                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1EXBrap0wF7oduW0JJppUbsDcqqNSKeBY94ng6yj7jgH9RVVJUx4siU3eeZB4CvywSE6aVMgoP?gv=true"
-                  style={{ border: 0 }}
+                  src="https://zcal.co/i/WPEs6rHu?embed=1&embedType=iframe"
+                  loading="lazy"
+                  style={{
+                    border: "none",
+
+                    height: "100%",
+                    width: "100%",
+                  }}
                   className="bg-white absolute top-0 rounded-lg z-50"
-                  width="100%"
-                  height="600"
+                  id="zcal-invite"
                 ></iframe>
               ) : null}
               <p
