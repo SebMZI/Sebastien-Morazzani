@@ -3,7 +3,7 @@ import Image from "next/image";
 import Services from "./components/Services";
 import Project from "./components/Project";
 import projetxMinia from "./assets/projetx.png";
-import wooflanderMinia from "./assets/wooflander.jpg";
+import plobmemMinia from "./assets/projetPlombem.png";
 import myauthMinia from "./assets/myauth.png";
 import addIcon from "./assets/addIcon.svg";
 import mouseIcon from "./assets/mouse.svg";
@@ -158,10 +158,10 @@ export default function Home() {
             delay={0.4}
           />
           <Project
-            title="Wooflander"
-            date="2023"
-            image={wooflanderMinia}
-            link="https://wooflander.vercel.app/"
+            title="Plombem"
+            date="2024"
+            image={plobmemMinia}
+            link="https://plombem.vercel.app"
             delay={0.6}
           />
           <Link href="/contact">
